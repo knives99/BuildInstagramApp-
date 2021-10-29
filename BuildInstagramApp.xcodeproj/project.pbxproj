@@ -28,11 +28,16 @@
 		9341B5932726B4CA00EC85DE /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341B5922726B4CA00EC85DE /* SearchResultViewController.swift */; };
 		9341B5952726B4EE00EC85DE /* PostEditerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341B5942726B4EE00EC85DE /* PostEditerViewController.swift */; };
 		9341B5972726B4FB00EC85DE /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341B5962726B4FB00EC85DE /* PublishPostViewController.swift */; };
+		9341E522272A830A0063BAD8 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341E521272A830A0063BAD8 /* FormTableViewCell.swift */; };
 		9355AC2C27279D8D007DBD4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9355AC2B27279D8D007DBD4C /* GoogleService-Info.plist */; };
 		9355AC2F2727A1FA007DBD4C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355AC2E2727A1FA007DBD4C /* DatabaseManager.swift */; };
 		9355AC312727A329007DBD4C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355AC302727A329007DBD4C /* AuthManager.swift */; };
 		9355AC332727A371007DBD4C /* StorgerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355AC322727A371007DBD4C /* StorgerManager.swift */; };
 		9355AC352727A95B007DBD4C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355AC342727A95B007DBD4C /* Extension.swift */; };
+		938D29F1272A427400025506 /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D29F0272A427400025506 /* IGFeedPostTableViewCell.swift */; };
+		938D29F5272A447200025506 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D29F4272A447200025506 /* IGFeedPostHeaderTableViewCell.swift */; };
+		938D29F7272A448700025506 /* IGFeedPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D29F6272A448700025506 /* IGFeedPostActionTableViewCell.swift */; };
+		938D29F9272A44AC00025506 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D29F8272A44AC00025506 /* IGFeedPostGeneralTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,11 +65,16 @@
 		9341B5922726B4CA00EC85DE /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		9341B5942726B4EE00EC85DE /* PostEditerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditerViewController.swift; sourceTree = "<group>"; };
 		9341B5962726B4FB00EC85DE /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		9341E521272A830A0063BAD8 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		9355AC2B27279D8D007DBD4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9355AC2E2727A1FA007DBD4C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9355AC302727A329007DBD4C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9355AC322727A371007DBD4C /* StorgerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorgerManager.swift; sourceTree = "<group>"; };
 		9355AC342727A95B007DBD4C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		938D29F0272A427400025506 /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		938D29F4272A447200025506 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		938D29F6272A448700025506 /* IGFeedPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionTableViewCell.swift; sourceTree = "<group>"; };
+		938D29F8272A44AC00025506 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		EB63674E2B33CC8C12EC688B /* Pods_BuildInstagramApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuildInstagramApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9341B5672726B27000EC85DE /* Main.storyboard */,
+				938D29F2272A427B00025506 /* Cells */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -210,6 +221,26 @@
 				9341B5962726B4FB00EC85DE /* PublishPostViewController.swift */,
 			);
 			path = Genra;
+			sourceTree = "<group>";
+		};
+		938D29F2272A427B00025506 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				938D29F3272A444000025506 /* HomeFeed */,
+				9341E521272A830A0063BAD8 /* FormTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		938D29F3272A444000025506 /* HomeFeed */ = {
+			isa = PBXGroup;
+			children = (
+				938D29F0272A427400025506 /* IGFeedPostTableViewCell.swift */,
+				938D29F4272A447200025506 /* IGFeedPostHeaderTableViewCell.swift */,
+				938D29F6272A448700025506 /* IGFeedPostActionTableViewCell.swift */,
+				938D29F8272A44AC00025506 /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = HomeFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,13 +365,18 @@
 				9341B57A2726B34E00EC85DE /* ExploreViewController.swift in Sources */,
 				9355AC332727A371007DBD4C /* StorgerManager.swift in Sources */,
 				9341B57C2726B36F00EC85DE /* CameraViewController.swift in Sources */,
+				938D29F5272A447200025506 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				9341B5662726B27000EC85DE /* HomeViewController.swift in Sources */,
 				9341B5892726B46000EC85DE /* PostViewController.swift in Sources */,
+				9341E522272A830A0063BAD8 /* FormTableViewCell.swift in Sources */,
+				938D29F7272A448700025506 /* IGFeedPostActionTableViewCell.swift in Sources */,
 				9341B57E2726B39500EC85DE /* NotificationsViewController.swift in Sources */,
 				9355AC352727A95B007DBD4C /* Extension.swift in Sources */,
 				9355AC2F2727A1FA007DBD4C /* DatabaseManager.swift in Sources */,
+				938D29F1272A427400025506 /* IGFeedPostTableViewCell.swift in Sources */,
 				9341B5932726B4CA00EC85DE /* SearchResultViewController.swift in Sources */,
 				9341B5852726B42300EC85DE /* LoginViewController.swift in Sources */,
+				938D29F9272A44AC00025506 /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				9341B5912726B4BB00EC85DE /* SearchViewController.swift in Sources */,
 				9341B5802726B3AE00EC85DE /* ProfileViewController.swift in Sources */,
 				9341B5952726B4EE00EC85DE /* PostEditerViewController.swift in Sources */,

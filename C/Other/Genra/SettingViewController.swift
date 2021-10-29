@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 struct SettingCellModel{
     let title:String
@@ -37,13 +38,30 @@ final class SettingViewController: UIViewController {
     }
     
     func configureModels(){
-        let section = [
-            SettingCellModel(title: "LogOut", handler: {
-                [weak self] in
-                self?.didTapLogout()
-            })
-        ]
-        data.append(section)
+        data.append([SettingCellModel(title: "Edit Profile", handler: {[weak self]  in self?.didTapEditProfie() }),
+                     SettingCellModel(title: "Invite Friend", handler: {[weak self]  in
+            self?.didTapInviteFriend()
+        }),
+                     SettingCellModel(title: "Save OriginalPosts", handler: {[weak self]  in
+            self?.didTapSaveOriginalPosts()
+        })
+                    ])
+        data.append([SettingCellModel(title: "Terms of Service", handler: {[weak self]  in
+            self?.openUrl(type:.terms)
+        }),
+                     SettingCellModel(title: "Privacy Policy", handler: {[weak self]  in                       self?.openUrl(type:.privacy)
+        }),
+                     SettingCellModel(title: "Help/FeedBack", handler: {[weak self]  in
+            self?.openUrl(type:.help)
+        })
+                    ])
+        data.append([SettingCellModel(title: "Log out", handler: {[weak self]  in
+            self?.didTapLogout()
+        })
+                    ])
+        
+        
+        
     }
     
     private func didTapLogout(){
@@ -68,10 +86,40 @@ final class SettingViewController: UIViewController {
             }
         }))
         // prevent Ipad Crash
-        actionSheet.popoverPresentationController?.sourceView = tableView 
+        actionSheet.popoverPresentationController?.sourceView = tableView
         actionSheet.popoverPresentationController?.sourceRect = tableView.bounds
         
         present(actionSheet, animated: true, completion: nil)
+    }
+    
+    enum SettingUrlType{
+        case terms,privacy,help
+    }
+    private func didTapEditProfie(){
+        let VC = EditProfileViewController()
+        VC.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: VC)
+        present(navVC, animated: true, completion: nil)
+    }
+    private func didTapInviteFriend(){
+        //show share Sheet to invite Friends
+    }
+    private func didTapSaveOriginalPosts(){
+
+    }
+    private func openUrl(type:SettingUrlType){
+        let urlString :String
+        switch type {
+        case .terms:
+            urlString = "https://help.instagram.com/581066165581870"
+        case .privacy:
+            urlString = "https://help.instagram.com/196883487377501"
+        case .help:
+            urlString = "https://help.instagram.com/"
+        }
+        guard let url = URL(string: urlString) else {return}
+        let VC = SFSafariViewController(url: url)
+        present(VC, animated: true, completion: nil)
     }
 }
 
